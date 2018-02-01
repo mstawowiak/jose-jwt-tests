@@ -22,7 +22,7 @@ configurations {
 dependencies {
     compile group: 'org.bitbucket.b_c',     name: 'jose4j',     version: '0.6.3'
 
-    codeQualityConfig  group: 'com.github.mstawowiak',  name: 'code-quality',   version: '1.0.0-SNAPSHOT'
+    codeQualityConfig  group: 'com.github.mstawowiak',  name: 'code-quality',   version: '1.0.0'
     testImplementation group: 'junit',                  name: 'junit',          version: '4.12'
 }
 
