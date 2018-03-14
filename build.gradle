@@ -22,7 +22,7 @@ configurations {
 dependencies {
     compile group: 'org.bitbucket.b_c',     name: 'jose4j',     version: '0.6.3'
 
-    codeQualityConfig  group: 'com.github.mstawowiak',  name: 'code-quality',   version: '1.0.0'
+    codeQualityConfig  group: 'com.github.mstawowiak',  name: 'code-quality',   version: '1.1.0'
     testImplementation group: 'junit',                  name: 'junit',          version: '4.12'
 }
 
@@ -30,13 +30,14 @@ checkstyle {
     config = resources.text.fromArchiveEntry(configurations.codeQualityConfig,
             "code-quality/static-code-analysis/checkstyle.xml")
     sourceSets = [sourceSets.main]
-    toolVersion = '8.4'
+    toolVersion = '8.8'
 }
 
 pmd {
+    ruleSets = []
     ruleSetConfig = resources.text.fromArchiveEntry(configurations.codeQualityConfig,
             "code-quality/static-code-analysis/pmd-ruleset.xml")
     consoleOutput = true
     sourceSets = [sourceSets.main]
-    toolVersion = '5.8.1'
+    toolVersion = '6.1.0'
 }
